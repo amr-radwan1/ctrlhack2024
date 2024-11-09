@@ -1,9 +1,9 @@
 {
-  "name": "human-anatomy-ar",
+  "name": "pose-three",
   "version": "0.7.3",
   "private": true,
-  "title": "Human Anatomy AR",
-  "description": "Use AR to teach about human Anatomy",
+  "title": "Pose Tracking Demo",
+  "description": "Geenee pose tracking demo",
   "dependencies": {
     "@geenee/bodyrenderers-three": "^0.7.3",
     "three": "^0.168.0"
