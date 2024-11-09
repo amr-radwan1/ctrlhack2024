@@ -1,26 +1,35 @@
 {
-  "name": "ctrlhack2024",
-  "version": "0.1.0",
+  "name": "pose-three",
+  "version": "0.7.3",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "title": "Pose Tracking Demo",
+  "description": "Geenee pose tracking demo",
   "dependencies": {
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "@geenee/bodyrenderers-three": "^0.7.3",
+    "three": "^0.168.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "@types/three": "^0.161.2",
+    "copyfiles": "^2.4.1",
+    "vite": "^5.3.5"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "postinstall": "npm run post:wasm",
+    "post:wasm": "copyfiles -f \"node_modules/@geenee/bodytracking/dist/*.wasm\" public/"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
