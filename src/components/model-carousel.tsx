@@ -10,7 +10,7 @@ export default function ModelCarousel({ onChange }: ModelCarouselProps) {
         name="model"
         value="heart"
         className="carousel-item"
-        style={{ backgroundImage: "url(./preview/heart.png)" }}
+        style={{ backgroundImage: "url(./heart.webp)" }}
         defaultChecked={true}
         onChange={() => onChange("heart")}
       />
@@ -19,7 +19,7 @@ export default function ModelCarousel({ onChange }: ModelCarouselProps) {
         name="model"
         value="lungs"
         className="carousel-item"
-        style={{ backgroundImage: "url(./preview/lungs.png)" }}
+        style={{ backgroundImage: "url(./lungs.webp)" }}
         onChange={() => onChange("lungs")}
       />
       <input
@@ -27,7 +27,7 @@ export default function ModelCarousel({ onChange }: ModelCarouselProps) {
         name="model"
         value="intestines"
         className="carousel-item"
-        style={{ backgroundImage: "url(./preview/intestines.png)" }}
+        style={{ backgroundImage: "url(./intestines.webp)" }}
         onChange={() => onChange("intestines")}
       />
     </div>
