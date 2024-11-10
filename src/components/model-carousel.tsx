@@ -8,10 +8,18 @@ export default function ModelCarousel({ onChange }: ModelCarouselProps) {
       <input
         type="radio"
         name="model"
+        value="empty"
+        className="carousel-item"
+        defaultChecked={true}
+        onChange={() => onChange("empty")}
+      />
+      <input
+        type="radio"
+        name="model"
         value="heart"
         className="carousel-item"
         style={{ backgroundImage: "url(./heart.webp)" }}
-        defaultChecked={true}
+        defaultChecked={false}
         onChange={() => onChange("heart")}
       />
       <input

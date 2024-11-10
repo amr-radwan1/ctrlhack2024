@@ -14,6 +14,10 @@ const modelMap: {
     outfit?: OutfitParams;
   };
 } = {
+  empty: {
+    file: "empty.glb", // No model to display
+    avatar: false,
+  },
   heart: {
     file: "heart.glb",
     avatar: false,
@@ -97,10 +101,16 @@ export default function ModelViewer() {
   const handleModelChange = async (modelName: string) => {
     if (!renderer) return;
     const model = modelMap[modelName];
-    await renderer.setOutfit(
-      model.file,
-      model.avatar ? undefined : model.outfit
-    );
+  
+    // If no model is selected, clear the outfit
+    if (model.file === null) {
+      await renderer.setOutfit(""); // Clear the current model
+    } else {
+      await renderer.setOutfit(
+        model.file,
+        model.avatar ? undefined : model.outfit
+      );
+    }
   };
 
   return (

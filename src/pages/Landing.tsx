@@ -120,7 +120,7 @@ export default function Landing() {
     <div style={styles.fullScreen}>
       <div style={styles.overlay}></div>
       <div style={styles.contentBox}>
-        <h1 style={styles.title}>Welcome to AR Medical Visualization</h1>
+        <h1 style={styles.title}>AnatomyAR</h1>
         <p style={styles.subtitle}>
           Discover the human body like never before. Dive into an immersive AR
           experience that brings anatomy to life, making learning fun and
