@@ -41,7 +41,7 @@ const modelMap: {
     file: "heart.glb",
     avatar: false,
     outfit: {
-      occluders: [/Head$/],
+      occluders: [/Head$/, /Body/,],
       hidden: [],
     },
   },
