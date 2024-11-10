@@ -62,9 +62,9 @@ export default function ModelViewer() {
     const initializeViewer = async () => {
       const newEngine = new PoseEngine();
       const token =
-        location.hostname === "localhost"
-          ? "x2PL34IsOrDDG9WYmTY2Yv26ZEl5H4-0"
-          : "prod.url_sdk_token";
+      import.meta.env.MODE === "development"
+      ? import.meta.env.VITE_GEENEE_SDK_TOKEN_DEV
+      : import.meta.env.VITE_GEENEE_SDK_TOKEN_PROD;
 
       const urlParams = new URLSearchParams(window.location.search);
       const initialRear = urlParams.has("rear");
