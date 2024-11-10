@@ -38,6 +38,15 @@ export default function ModelCarousel({ onChange }: ModelCarouselProps) {
         style={{ backgroundImage: "url(./intestines.webp)" }}
         onChange={() => onChange("intestines")}
       />
+      <input
+        type="radio"
+        name="model"
+        value="skeleton"
+        className="carousel-item"
+        style={{ backgroundImage: "url(./skeleton.png)" }}
+        onChange={() => onChange("skeleton")}
+      />
     </div>
+    
   );
 }

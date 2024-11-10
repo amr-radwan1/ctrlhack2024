@@ -42,6 +42,14 @@ const modelMap: {
       hidden: [],
     },
   },
+  skeleton: {
+    file: "skeleton2.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/, /Body/],
+      hidden: [],
+    },
+  },
 };
 
 export default function ModelViewer() {
