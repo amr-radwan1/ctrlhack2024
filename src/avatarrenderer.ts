@@ -135,9 +135,6 @@ export class AvatarRenderer extends PoseRenderer {
     if (cosMin > 0.8) this.handsUp = true;
     if (cosMin < 0.7) this.handsUp = false;
 
-    const targetDistance = 0.2;
-    const wristDistance = wristL.distanceTo(wristR);
-
     // Position text model
     const { textModel } = this;
     if (textModel) {
@@ -145,6 +142,7 @@ export class AvatarRenderer extends PoseRenderer {
       textModel.position.copy(position);
       textModel.visible = this.handsUp;
     }
+    
     await super.update(result, stream);
   }
 }

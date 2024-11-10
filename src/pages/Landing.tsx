@@ -20,14 +20,9 @@ export default function Landing() {
       color: "#333",
     },
     overlay: {
-      position: "absolute" as const,
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      background: "rgba(255, 255, 255, 0.7)",
+      
       zIndex: 1,
-      backdropFilter: "blur(8px)",
+
     },
     contentBox: {
       position: "relative" as const,
@@ -37,8 +32,8 @@ export default function Landing() {
       borderRadius: "25px",
       padding: "40px",
       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-      backdropFilter: "blur(10px)",
       animation: "fadeInUp 1.5s ease",
+      marginBottom: "20px",
     },
     title: {
       fontSize: "2.3rem",
@@ -53,7 +48,7 @@ export default function Landing() {
     },
     ctaButton: {
       padding: "12px 32px",
-      background: "linear-gradient(135deg, #80d0c7, #a0e7e5)",
+      background: "linear-gradient(135deg, #4a7f75, #6bbfb3)",
       border: "none",
       color: "#ffffff",
       cursor: "pointer",
@@ -64,7 +59,7 @@ export default function Landing() {
       boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     },
     featuresSection: {
-      padding: "60px 20px",
+      padding: "40px 20px",
       background: "#f0faff",
       textAlign: "center" as const,
       borderTop: "3px solid #b3e5fc",
@@ -127,7 +122,7 @@ export default function Landing() {
           engaging for all ages.
         </p>
         <button style={styles.ctaButton} onClick={() => navigate("/model")}>
-          Start Experience
+          Get Started
         </button>
       </div>
 

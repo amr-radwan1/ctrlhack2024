@@ -27,7 +27,7 @@ const modelMap: {
     },
   },
   lungs: {
-    file: "lungs.glb",
+    file: "lungs3.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
@@ -35,7 +35,7 @@ const modelMap: {
     },
   },
   intestines: {
-    file: "intestines.glb",
+    file: "intestines2.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
@@ -62,9 +62,9 @@ export default function ModelViewer() {
     const initializeViewer = async () => {
       const newEngine = new PoseEngine();
       const token =
-        import.meta.env.MODE === "development"
-          ? import.meta.env.VITE_GEENEE_SDK_TOKEN_DEV
-          : import.meta.env.VITE_GEENEE_SDK_TOKEN_PROD;
+        location.hostname === "localhost"
+          ? "x2PL34IsOrDDG9WYmTY2Yv26ZEl5H4-0"
+          : "prod.url_sdk_token";
 
       const urlParams = new URLSearchParams(window.location.search);
       const initialRear = urlParams.has("rear");
