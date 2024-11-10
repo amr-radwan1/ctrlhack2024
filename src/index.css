@@ -32,8 +32,7 @@ body {
   text-align: center;
   z-index: 2;
   padding: 2rem;
-  background-image: url(/bevel.svg);
-  background-color: hsla(0, 0%, 100%, 0.8);
+  background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 0%, 96%));
   background-position: center;
   background-size: cover;
   backdrop-filter: blur(10px);
