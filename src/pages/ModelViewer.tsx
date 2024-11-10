@@ -27,7 +27,7 @@ const modelMap: {
     },
   },
   lungs: {
-    file: "lungs3.glb",
+    file: "lungs2.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
@@ -35,7 +35,7 @@ const modelMap: {
     },
   },
   intestines: {
-    file: "intestines2.glb",
+    file: "intestines.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
