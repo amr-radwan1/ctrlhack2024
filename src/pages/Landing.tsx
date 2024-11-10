@@ -18,8 +18,6 @@ const Landing: React.FC = () => {
         <button
           className="cta-button"
           onClick={() => navigate("/model")}
-          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
           Start Experience
         </button>
