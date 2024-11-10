@@ -41,12 +41,20 @@ const modelMap: {
     file: "heart.glb",
     avatar: false,
     outfit: {
-      occluders: [ /Body/],
+      occluders: [/Body/],
       hidden: [],
     },
   },
   lungs: {
     file: "lungs.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/, /Body/],
+      hidden: [],
+    },
+  },
+  intestines: {
+    file: "intestines.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
