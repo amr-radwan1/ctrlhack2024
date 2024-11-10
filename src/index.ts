@@ -21,16 +21,24 @@ const modelMap: {
     outfit?: OutfitParams;
   };
 } = {
-  heart: {
-    file: "heart.glb",
+  onesie: {
+    file: "onesie.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
-      hidden: [],
+      hidden: [/Eye/, /Teeth/, /Footwear/],
     },
   },
-  lungs: {
-    file: "lungs.glb",
+  jacket: {
+    file: "jacket.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/, /Body/],
+      hidden: [/Eye/, /Teeth/, /Bottom/, /Footwear/, /Glasses/],
+    },
+  },
+  heart: {
+    file: "heart.glb",
     avatar: false,
     outfit: {
       occluders: [/Head$/, /Body/],
