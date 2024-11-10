@@ -72,8 +72,8 @@ export class AvatarRenderer extends PoseRenderer {
       );
     geometry.rotateY(Math.PI);
     const mesh = new three.Mesh(geometry, [
-      new three.MeshStandardMaterial({ color: 0x3bdb9b, flatShading: true }),
-      new three.MeshStandardMaterial({ color: 0x3bdb9b }),
+      new three.MeshStandardMaterial({ color: 0xf6ff33, flatShading: true }),
+      new three.MeshStandardMaterial({ color: 0xf6ff33 }),
     ]);
     this.textModel = new three.Group();
     this.textModel.visible = false;
@@ -134,6 +134,10 @@ export class AvatarRenderer extends PoseRenderer {
     const cosMin = Math.min(armLCos, armRCos, foreArmLCos, foreArmRCos);
     if (cosMin > 0.8) this.handsUp = true;
     if (cosMin < 0.7) this.handsUp = false;
+
+    const targetDistance = 0.2;
+    const wristDistance = wristL.distanceTo(wristR);
+
     // Position text model
     const { textModel } = this;
     if (textModel) {
