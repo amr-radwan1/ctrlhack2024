@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
         <h1 className="title">Welcome to AR Medical Visualization</h1>
         <p className="subtitle">
           Discover the human body like never before. Dive into an immersive AR experience that
-          brings anatomy to life, empowering educators and students alike.
+          brings anatomy to life, making learning fun and engaging for all ages.
         </p>
         <button
           className="cta-button"
@@ -30,33 +30,28 @@ const Landing: React.FC = () => {
             <div className="feature-icon">&#x1F393;</div>
             <h3>For Medical Students</h3>
             <p>
-              Access intricate, detailed 3D anatomy models that enhance the learning experience for
-              future healthcare professionals. Study the human body in a way that feels almost
-              hands-on.
+              Access detailed 3D anatomy models that enhance the learning experience, making it easier to understand complex subjects.
             </p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">&#x1F4D6;</div>
             <h3>For Young Learners</h3>
             <p>
-              Engaging AR features make anatomy accessible and fun, fostering curiosity and
-              understanding in young minds. Interactive lessons make complex topics approachable.
+              Engaging AR features make learning accessible and fun, fostering curiosity and understanding in young minds.
             </p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">&#x1F4BB;</div>
             <h3>Interactive Teaching</h3>
             <p>
-              Teachers can guide students with real-time, interactive models, making lessons
-              dynamic and captivating. Enhance traditional classroom teaching with a tech-driven
-              twist.
+              Teachers can guide students with interactive models, adding a dynamic, tech-driven twist to traditional lessons.
             </p>
           </div>
         </div>
       </section>
 
       <footer className="footer">
-        <p>© 2024 Anatomy AR. Redefining Education Through Innovation.</p>
+        <p>© 2024 Anatomy AR. Empowering education with a playful touch.</p>
       </footer>
     </div>
   );
