@@ -15,26 +15,37 @@ const urlParams = new URLSearchParams(window.location.search);
 let rear = urlParams.has("rear");
 // Model map
 const modelMap: {
-    [key: string]: {
-        file: string, avatar: boolean,
-        outfit?: OutfitParams
-    }
+  [key: string]: {
+    file: string;
+    avatar: boolean;
+    outfit?: OutfitParams;
+  };
 } = {
-    onesie: {
-        file: "onesie.glb", avatar: false,
-        outfit: {
-            occluders: [/Head$/, /Body/],
-            hidden: [/Eye/, /Teeth/, /Footwear/]
-        }
+  onesie: {
+    file: "onesie.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/, /Body/],
+      hidden: [/Eye/, /Teeth/, /Footwear/],
     },
-    jacket: {
-        file: "jacket.glb", avatar: false,
-        outfit: {
-            occluders: [/Head$/, /Body/],
-            hidden: [/Eye/, /Teeth/, /Bottom/, /Footwear/, /Glasses/]
-        }
-    }
-}
+  },
+  jacket: {
+    file: "jacket.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/, /Body/],
+      hidden: [/Eye/, /Teeth/, /Bottom/, /Footwear/, /Glasses/],
+    },
+  },
+  heart: {
+    file: "heart.glb",
+    avatar: false,
+    outfit: {
+      occluders: [/Head$/],
+      hidden: [],
+    },
+  },
+};
 let model = "onesie";
 let avatar = modelMap["onesie"].avatar;
 
@@ -116,27 +127,33 @@ async function main() {
             }, 10000);
         };
     // Model carousel
-    const modelBtns = document.getElementsByName(
-        "model") as NodeListOf<HTMLInputElement>;
-    modelBtns.forEach((btn) => {
-        btn.onchange = async () => {
-            if (btn.checked && modelMap[btn.value]) {
-                modelBtns.forEach((btn) => { btn.disabled = true; })
-                outfitSwitch.disabled = true;
-                const spinner = createSpinner();
-                document.body.appendChild(spinner);
-                model = btn.value;
-                avatar = modelMap[model].avatar;
-                await renderer.setOutfit(
-                    modelMap[model].file,
-                    avatar ? undefined : modelMap[model].outfit);
-                outfitSwitch.checked = avatar;
-                document.body.removeChild(spinner);
-                modelBtns.forEach((btn) => { btn.disabled = false; });
-                outfitSwitch.disabled = false;
-            }
-        };
-    });
+   const modelBtns = document.getElementsByName(
+     "model"
+   ) as NodeListOf<HTMLInputElement>;
+   modelBtns.forEach((btn) => {
+     btn.onchange = async () => {
+       if (btn.checked && modelMap[btn.value]) {
+         modelBtns.forEach((btn) => {
+           btn.disabled = true;
+         });
+         outfitSwitch.disabled = true;
+         const spinner = createSpinner();
+         document.body.appendChild(spinner);
+         model = btn.value;
+         avatar = modelMap[model].avatar;
+         await renderer.setOutfit(
+           modelMap[model].file,
+           avatar ? undefined : modelMap[model].outfit
+         );
+         outfitSwitch.checked = avatar;
+         document.body.removeChild(spinner);
+         modelBtns.forEach((btn) => {
+           btn.disabled = false;
+         });
+         outfitSwitch.disabled = false;
+       }
+     };
+   });
     // Initialization
     await Promise.all([
         engine.addRenderer(renderer),
